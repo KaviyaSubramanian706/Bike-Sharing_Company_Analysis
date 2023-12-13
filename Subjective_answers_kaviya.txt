@@ -1,0 +1,83 @@
+ASSIGNMENT BASED SUBJECTIVE QUESTIONS
+
+
+1. Effect of Categorical variables on dependent variable:
+	- Seasons,Weather are the categorical variables which had a impact on target variable.
+	- Fall and summers pose as good seasons having more renters.
+	- Clear and misty weather give out good numbers compared to snowy weather.
+
+
+
+
+2. Drop First True for dummy variable:
+	- If there are 3 categories in caetegorical variable,dummy variable creation will create 3 separate columns.
+	- If we use drop_first=True ,then it will create only 2 columns,for n categories it will create n-1 columns
+	- For example,If seasons has summer,spring,fall winter drop first will create columns spring,fall,winter if it is summer,all these columns will be 0.It avoida use of another column
+	
+	
+	
+	
+3. Relationship with target variable:
+	- From the pair plot we can come to a conclusion that temp and atemp has high positive correlation with target variable cnt.
+	
+	
+	
+4. Validating the assumptions of Linear Regression:
+	- Error values are plotted as a histogram to check if they follow normal distribution
+	- Error values are plotted as a scatter plot to check if they have constant variance
+	
+	
+	
+		
+5. Top 3 features:
+	- atemp ranks first in its significance to predict target variable.When atemp increases no.of renters also increase.
+	- Light Snow, Light Rain + Thunderstorm + Scattered clouds, Light Rain + Scattered clouds weather affects the renters number next , this weather reduces the number of renters.
+	- Next,Spring season affects the number of renters in a negative way.
+
+
+
+GENERAL SUBJECTIVE QUESTIONS
+
+
+1. Linear Regression:
+	In my own words,Linear Regression is when you try to find the best linear fit for a set of points in the space,so for the next unknown set of variables that linear equation could be used to find the points on the same space.It is a type of supervised machine learning algorithm using which we can find a linear equation relating  one or multiple independent variables to the target variable.That equation can be used for predicting the unknown target variable using the known independent variables
+
+
+
+
+2. Anscombe’s quartet:
+	Anscombe's quartet is a group of four datasets having different shapes when plotted,(angled line,somewhat quadratic,random,somewhat vertical line) but having same mean,standard deviation and regression line.
+	It is used to represent the importance of data visualisation,instead of just viewing the statistical results.
+
+
+
+
+3. Pearson’s R:
+	Pearson's R is the correlation coefficient used to check correlation between linear variables.It ranges between -1 and 1.
+	If it is 1 then it is strongly positively correlated
+	If it is -1 then it is strongly negatively correlated
+	If it is 0 then there is no correlation at all
+
+
+
+
+4.Scaling:
+	Scaling is bringing the data to a common scale.It is needed when the data used for training is in different scales .It is important to have same range in data so we can interpret the importance of features using its coefficient value
+	Standardized scaling has a mean of 0 and standard deviation of 1
+	Normalized scaling is normalizing data to any range,mostly 0-1 using min and max values.
+
+
+
+
+5.VIF-Infinity:
+	When any of the two or more features are perfectly correlated with each other,then we will get infinite VIF.
+	We can drop variables having infinite VIF to avoid multicollinearity.
+
+6.Q-Q Plot:
+	Q-Q plot is quantile-quantile plot which is used to find if two sets of data
+	 	come from same distribution
+		have same location and range,
+		have similar distributional shapes
+		have similar tail behavior
+	This can be used in linear regression to find if train and test sets are sample from the same common population.
+
